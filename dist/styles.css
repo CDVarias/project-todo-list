@@ -40,9 +40,7 @@ body{
 }
 
 main{
-    display: grid;
-    grid-template-columns: minmax(200px,1fr) 4fr;
-    grid-template-rows: auto;
+    display: flex;
 }
 
 .left-part{
@@ -55,6 +53,7 @@ main{
     gap: 50px;
     padding-left: 20px;
     padding-right: 20px;
+    flex: 1;
 }
 
 .home-part, .project-part{
@@ -74,8 +73,11 @@ main{
 }
 
 .main-content{
-    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
     padding: 20px 40px;
+    
 }
 
 .task-bar{
