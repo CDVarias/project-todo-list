@@ -10,7 +10,7 @@ export default class Storage {
     static getTodoList(){
         const todoList = Object.assign(
             new TodoList(),
-            JSON.parse(localStorage.getItem(todoList))
+            JSON.parse(localStorage.getItem('todoList'))
         )
 
         todoList.setProjects(
@@ -50,7 +50,19 @@ export default class Storage {
 
     static deleteTask(projectName,taskName){
         const todoList = Storage.getTodoList()
-        todo.getProject(projectName).getTask(taskName).setDate(newDueDate)
+        todoList.getProject(projectName).deleteTask(taskName)
+        Storage.saveTodoList(todoList)
+    }
+
+    static renameTask(projectName,taskName, newTaskName){
+        const todoList = Storage.getTodoList()
+        todoList.getProject(projectName).getTask(taskName).setName(newTaskName)
+        Storage.saveTodoList(todoList)
+    }
+
+    static setTaskDate(projectName, taskName, newDueDate){
+        const todoList = Storage.getTodoList()
+        todoList.getProject(projectName).getTask(taskName).setDate(newDueDate)
         Storage.saveTodoList(todoList)
     }
 

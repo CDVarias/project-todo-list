@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Todo List</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -40,22 +41,17 @@
             </div>
             <div class="project-part" id="project-part-id">
                 <div class="projects" id="-projects-id">
-                    <p>Projects</p>
+                    <p class="projects-title">Projects</p>
+                    <hr>
+                    
                     <div class="projects-list" id="projects-list-id"></div>
                 </div>
-                <hr>
-                <!-- <button class="created-project" id="created-project-id">
-                    <div class="left-side">
-                        <p>School</p>
-                    </div>
-                    <div class="right-side">
-                        <img src="./img/del-logo.svg" alt="">
-                    </div>
-                </button> -->
+                
                 <button class="add-project" id="add-project-id">
                     <img src="./img/add-logo.svg" alt="">
                     <p>Add Project</p>
                 </button>
+
                 <div class="add-project-popup" id="add-project-popup-id">
                     <input type="text" class="input-add-project-popup" id="input-add-project-popup-id" placeholder="Enter Project Name">
 
@@ -66,68 +62,12 @@
                 </div>
             </div>
         </div>
-        <div class="main-content" id="main-content-id">
-            <div class="task-bar" id="task-bar-id">
-                <p>Tasks</p>
-            </div>
-            <!-- <button class="created-task" id="created-task-id">
-                <div class="created-task-left-side">
-                    <img src="./img/taskcircle-logo.svg" alt="">
-                    <p>Title:</p>
-                    <p class="created-task-title"></p>
-                </div>
-                <div class="created-task-right-side">
-                    <p>Due Date:</p>
-                    <p class="due-date"></p>
-                    <img src="./img/del-logo.svg" alt="">
-                </div>
-            </button> -->
-            <!-- <div class="add-task" id="add-task-id">
-                <img src="./img/add-logo.svg" alt="">
-                <p>Add task</p>
-            </div> -->
-            <div class="add-task-content" id="add-task-content-id">
-                    <!-- <div class="task-container">
-                        <div class="add-task-first-row">
-                            <div class="first-column">
-                                <label for="task-title">Title:</label>
-                                <input type="text">
-                            </div>
-                            <div class="second-column">
-                                <label for="task-title">Date:</label>
-                                <input type="text">
-                            </div>
-                        </div>
-                        <div class="add-task-second-row">
-                            <label for="task-title">Description:</label>
-                            <textarea name="" id="" cols="80" rows="5"></textarea>
-                        </div>
-                        <div class="add-task-third-row">
-                            <div class="third-row-left-part">
-                                <p>Priority:</p>
-                                <div class="priority-options">
-                                    <select name="priorities" id="priorities-id" class="priorities-class">
-                                        <option value="Low">Low</option>
-                                        <option value="Medium">Medium</option>
-                                        <option value="High">High</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="third-row-right-part">
-                                <button class="add-task-btn">Add</button>
-                                <button class="cancel-task-btn">Cancel</button>
-                            </div>
-                        </div>
-                    </div> -->
-            </div>
-        </div>
+        <div class="main-content" id="main-content-id"></div>
     </main>
     <footer>
         <div class="footer" id="footer-id">
             <p>Copyright @ 2023 FilGuy</p>
         </div>
     </footer>
-    
-    <script src="main.js"></script>
 </body>
 </html>
